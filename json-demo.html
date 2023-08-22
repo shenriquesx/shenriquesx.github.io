@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+
+        var y = 0;
+
+        fetch('./accounts.json')
+        .then(function(data){
+            return data.json();
+        }).then(function(result){
+        
+            var z = JSON.stringify(result);
+            console.log(z);
+            console.log(result['accounts'][0]['IBAN']);
+            y = result['accounts'][0]['IBAN'];
+
+        });
+
+        console.log(y);
+
+    </script>
+    <title>Sean Henriques</title>
+    <style type="text/css">
+      body{
+        margin: 40px auto;
+        max-width: 650px;
+        line-height: 1.6;
+        font-size: 16px;
+        padding: 10px
+      }
+      h1,h2,h3{
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+  	<p><strong>Bank Accounts</strong></p>
+    <p id="test"></p>
+</body>
+</html>
