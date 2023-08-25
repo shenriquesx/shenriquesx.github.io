@@ -3,23 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
 
-        var y = 0;
+      console.log('Script loaded');
 
-        fetch('./accounts.json')
-        .then(function(data){
-            return data.json();
-        }).then(function(result){
-        
-            var z = JSON.stringify(result);
-            console.log(z);
-            console.log(result['accounts'][0]['IBAN']);
-            y = result['accounts'][0]['IBAN'];
+      var output = '<!-- -->';
 
+
+      $().ready(function(){
+        $.getJSON( "./games.json", function(data) {
+          for (let i = 0; i < data['games'].length; i++) {
+
+              output += "<tr><td>" + data['games'][i]['title'] + "</td> <td>" + data['games'][i]['platform'] + "</td><td>";
+
+                if (data['rating-scheme'] = "percentage"){
+                  output += (data['games'][i]['rating'] / 10) * 100 + "%";
+                }
+;
+              output += "</td><td>" + data['games'][i]['completion-date'] + "</td></tr><br>";
+
+          }
+          $(".content").html(output);
         });
+      });
 
-        console.log(y);
 
     </script>
     <title>Sean Henriques</title>
@@ -34,10 +42,23 @@
       h1,h2,h3{
         line-height: 1.2;
       }
+      td{
+        padding: 20px;
+        border: 1px solid black;
+      }
+      .bold{
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
-  	<p><strong>Bank Accounts</strong></p>
-    <p id="test"></p>
-</body>
+    <table>
+      <tbody>
+      <tr class="bold"><td>Title</td><td>Platform</td><td>Rating</td><td>Completion</td></tr>
+      </tbody>
+      <tbody class="content">
+
+        </tbody>
+  </table>
+  </body>
 </html>
