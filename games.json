@@ -1,20 +1,19 @@
 {
+  "rating-scheme": "percentage",
   "games" : [
     {
       "title": "Astro's Playroom",
-      "created": "22-08-2023",
-      "owner": "John Smith",
-      "DOB": "01-01-1990",
-      "email": "john.smith@iadt.ie",
-      "balance": "3000"
+      "platform": "PlayStation 5",
+      "rating": 9,
+      "review": "Astro's Playroom is a vibrant platformer that serves as a perfect introduction to the PlayStation 5 for all ages. Whether a PlayStation enthusiast or someone new to gaming - this is the perfect adventure to complete in a day.",
+      "completion-date": "30-07-2023"
     },
     {
-      "title": "Spyro: Reignited Trilogy",
-      "created": "22-08-2023",
-      "owner": "Jane Smith",
-      "DOB": "02-02-1992",
-      "email": "jane.smith@iadt.ie",
-      "balance": "6000"
+      "title": "Spyro Reignited Trilogy",
+      "platform": "PlayStation 5",
+      "rating": 8,
+      "review": "",
+      "completion-date": "19-08-2023"
     }
   ]
 }
