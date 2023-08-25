@@ -1,0 +1,20 @@
+{
+  "games" : [
+    {
+      "title": "Astro's Playroom",
+      "created": "22-08-2023",
+      "owner": "John Smith",
+      "DOB": "01-01-1990",
+      "email": "john.smith@iadt.ie",
+      "balance": "3000"
+    },
+    {
+      "title": "Spyro: Reignited Trilogy",
+      "created": "22-08-2023",
+      "owner": "Jane Smith",
+      "DOB": "02-02-1992",
+      "email": "jane.smith@iadt.ie",
+      "balance": "6000"
+    }
+  ]
+}
